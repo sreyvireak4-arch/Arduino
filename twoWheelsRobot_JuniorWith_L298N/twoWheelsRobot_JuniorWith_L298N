@@ -39,12 +39,12 @@ void moveBackward() {
   digitalWrite(in3, LOW); digitalWrite(in4, HIGH);
 }
 
-void turnLeft() {
+void turnRight() {
   digitalWrite(in1, HIGH); digitalWrite(in2, LOW);
   digitalWrite(in3, LOW);  digitalWrite(in4, HIGH);
 }
 
-void turnRight() {
+void turnLeft() {
   digitalWrite(in1, LOW);  digitalWrite(in2, HIGH);
   digitalWrite(in3, HIGH); digitalWrite(in4, LOW);
 }
@@ -65,16 +65,6 @@ void handleButtonPress() {
   else if (GamePad.isDownPressed()) {
     Serial.println("Backward");
     moveBackward();
-  }
-
-  else if (GamePad.isLeftPressed()) {
-    Serial.println("Turn Left");
-    turnLeft();
-  }
-
-  else if (GamePad.isRightPressed()) {
-    Serial.println("Turn Right");
-    turnRight();
   }
 
   else if (GamePad.isSquarePressed()) {
